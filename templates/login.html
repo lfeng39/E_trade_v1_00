@@ -1,0 +1,94 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="referrer" content="no-referrer">
+<link type="text/css" rel="stylesheet" media="all" href="{%static 'css/main.css'%}">
+<link type="text/css" rel="stylesheet" media="all" href="{%static 'css/layout.css'%}">
+<script src="{%static 'js/jquery-1.6.2.js'%}"></script>
+<script src="{%static 'js/lfeng.js'%}"></script>
+<title>{{ appTitle.0 }}</title>
+
+</head>
+<body>
+    <div class="top">
+        <div class="nav">
+            <div>
+                <a class="" href="{{ url.0 }}">
+                    <h2>{{ appTitle.0 }}</h2>
+                </a>
+            </div>
+            <div class="app flex_container">
+                <div><h3><a href="{{ url.1 }}">{{ appTitle.1 }}</a></h3></div>
+                <div><h3><a href="{{ url.2 }}">{{ appTitle.2 }}</a></h3></div>
+                <div><h3><a href="{{ url.3 }}">{{ appTitle.3 }}</a></h3></div>
+                <div><h3><a href="{{ url.4 }}">{{ appTitle.4 }}</a></h3></div>
+                <div><h3><a href="{{ url.5 }}">{{ appTitle.5 }}</a></h3></div>
+            </div>
+            <div>
+                <!-- <a href="{{ url.6 }}">{{ url.6 }}</a> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="wrap">
+
+        <div class="container-standard">
+            
+            <form class="login" action="/JAL/yes" method="post">
+                {%csrf_token%}
+                <!-- {{ form }} -->
+                <div>
+                    <h1>{{ appTitle.6 }}</h1>
+                </div>
+                <ul>
+                    <!-- <label for="test">Your name: </label> -->
+                    <li>
+                        <input id="account" type="text" name="account" value="YOUR EMAIL" onclick="loginControl('accountClick')">
+                        <!-- <input id="account" type="text" name="account" value="YOUR EMAIL" onclick="loginControl('accountClick')" onblur="loginControl('accountOnblur')"> -->
+                    </li>
+                    <li>
+                        <input id="passWord" type="text" name="passWord" value="PASSWORD" onclick="loginControl('passWordClick')">
+                        <!-- <input id="passWord" type="text" name="passWord" value="PASSWORD" onclick="loginControl('passWordClick')" onblur="loginControl('passWordOnblur')"> -->
+                    </li>
+                    <li>
+                        <!-- <input type="submit" value="{{ appTitle.6 }}"> -->
+                        <!-- <a href="" role="button" type="submit">{{ appTitle.6 }}</a> -->
+                        <button type="submit">{{ appTitle.6 }}</button>
+                    </li>
+                    <li>
+                        <a href="{{ url.7 }}">{{ appTitle.7 }}</a>
+                    </li>
+                </ul>
+            </form>
+
+        </div>
+
+
+        
+    </div>
+    
+
+
+    <footer>
+        <div class="container-standard footer">
+            <div>
+                <ul>
+                    <li><strong>Servies</strong></li>
+                    <li><p><a href="">Trenovkr</a></p></li>
+                    <li><p><a href="">BOBODOO</a></p></li>
+                </ul>
+                <ul>
+                    <li><strong>About US</strong></li>
+                    <li><p><a href="">Brand Story</a></p></li>
+                    <li><p><a href="">Contact</a></p></li>
+                </ul>
+            </div>
+            <div><p>Copyright © 2022 3.9Kr Inc. All rights reserved. </p></div>
+        </div>
+        
+    </footer>
+    
+</body>
+</html>
